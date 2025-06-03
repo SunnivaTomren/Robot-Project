@@ -1,6 +1,5 @@
 import cv2
 
-# Start webkameraet (0 er vanligvis det innebygde kameraet)
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
@@ -15,10 +14,10 @@ while True:
 
     cv2.imshow("Kamerafeed", frame)
 
-    # Avslutt hvis du trykker på q
+
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# Rydd opp
+
 cap.release()
 cv2.destroyAllWindows() 
